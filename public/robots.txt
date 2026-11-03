@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /owner/
+Disallow: /owner
+
+Sitemap: https://mavelirestaurant.in/sitemap.xml

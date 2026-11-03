@@ -1,0 +1,53 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Check if the authenticated user is the designated owner/admin
+    function isOwner() {
+      return isAuthenticated() && (
+        request.auth.token.email == "owner@mavelirestaurant.in" ||
+        request.auth.token.admin == true
+      );
+    }
+
+    // Public restaurant settings & menu items
+    match /settings/{document=**} {
+      allow read: if true;
+      allow write: if isOwner();
+    }
+
+    match /menu/{itemId} {
+      allow read: if true;
+      allow write: if isOwner();
+    }
+
+    // Orders: anyone can create an order, but only the owner can read all or update status
+    match /orders/{orderId} {
+      allow create: if true;
+      allow read, update, delete: if isOwner();
+    }
+
+    // Reservations: customers can submit, owner manages
+    match /reservations/{reservationId} {
+      allow create: if true;
+      allow read, update, delete: if isOwner();
+    }
+
+    // Contact messages: public write with honeypot validation, owner read
+    match /messages/{messageId} {
+      allow create: if true;
+      allow read, update, delete: if isOwner();
+    }
+
+    // Payments log: customer can record successful test payment, owner views all
+    match /payments/{paymentId} {
+      allow create: if true;
+      allow read, update, delete: if isOwner();
+    }
+  }
+}

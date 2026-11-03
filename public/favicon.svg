@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#164E3D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d2c23;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5E6C4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D99B26;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#975919;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#grad)" stroke="#D99B26" stroke-width="3" />
+  <!-- Banana Leaf / Flame Icon -->
+  <path d="M50 18 C38 32, 28 50, 42 75 C45 80, 55 80, 58 75 C72 50, 62 32, 50 18 Z" fill="url(#goldGrad)" opacity="0.95" />
+  <!-- Central spine line -->
+  <path d="M50 24 L50 78" stroke="#164E3D" stroke-width="2.5" stroke-linecap="round" />
+  <circle cx="50" cy="84" r="3" fill="#D99B26" />
+</svg>

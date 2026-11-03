@@ -324,3 +324,4 @@ export default function ReservationSection({ onToast }) {
     </section>
   );
 }
+

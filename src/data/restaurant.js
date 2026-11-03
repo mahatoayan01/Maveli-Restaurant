@@ -133,3 +133,4 @@ export const RESTAURANT_INFO = {
     ]
   }
 };
+

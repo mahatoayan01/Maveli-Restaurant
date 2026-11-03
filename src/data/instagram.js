@@ -63,3 +63,4 @@ export const INSTAGRAM_CONFIG = {
     }
   ]
 };
+

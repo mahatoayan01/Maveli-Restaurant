@@ -157,3 +157,4 @@ The website supports online ordering with delivery fee calculations (free delive
 - High-contrast colors conforming to WCAG AA guidelines.
 - Visible focus rings for keyboard navigation.
 - Floating mobile action buttons for instant 1-tap calling and WhatsApp ordering.
+

@@ -396,3 +396,4 @@ export async function updateRestaurantSettings(settings) {
   setLocalItem("maveli_settings", settings);
   return settings;
 }
+

@@ -56,3 +56,4 @@ export const GALLERY_ITEMS = [
     description: "Rich dark jaggery and pure ghee dessert garnished with coconut bits."
   }
 ];
+
